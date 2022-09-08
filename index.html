@@ -13,48 +13,50 @@
 
     <tr>
         <td colspan="4">
-            <input type="text" name="display" id="input">
+            <input type="text" name="display" id="input" disabled>
         </td>
     </tr>
     <tr>
-        <td><input type="button" name="one" value="1" onclick="caculator('1')"></td>
-        <td><input type="button" name="two" value="2" onclick="caculator('2')"></td>
-        <td><input type="button" name="three" value="3" onclick="caculator('3')"></td>
-        <td><input type="button" class="operator" name="plus" value="+" onclick="caculator('+')">
+        <td><input type="button" name="one" value="1" onclick="calculator('1')"></td>
+        <td><input type="button" name="two" value="2" onclick="calculator('2')"></td>
+        <td><input type="button" name="three" value="3" onclick="calculator('3')"></td>
+        <td><input type="button" class="operator" name="plus" value="+" onclick="calculator('+')">
         </td>
     </tr>
     <tr>
-        <td><input type="button" name="four" value="4" onclick="caculator('4')"></td>
-        <td><input type="button" name="five" value="5" onclick="caculator('5')"></td>
-        <td><input type="button" name="six" value="6" onclick="caculator('6')"></td>
-        <td><input type="button" class="operator" name="plus" value="-" onclick="caculator('-')">
+        <td><input type="button" name="four" value="4" onclick="calculator('4')"></td>
+        <td><input type="button" name="five" value="5" onclick="calculator('5')"></td>
+        <td><input type="button" name="six" value="6" onclick="calculator('6')"></td>
+        <td><input type="button" class="operator" name="plus" value="-" onclick="calculator('-')">
         </td>
     </tr>
     <tr>
-        <td><input type="button" name="seven" value="7" onclick="caculator('7')"></td>
-        <td><input type="button" name="eigh" value="8" onclick="caculator('8')"></td>
-        <td><input type="button" name="nine" value="9" onclick="caculator('9')"></td>
-        <td><input type="button" class="operator" name="plus" value="*" onclick="caculator('*')">
+        <td><input type="button" name="seven" value="7" onclick="calculator('7')"></td>
+        <td><input type="button" name="eigh" value="8" onclick="calculator('8')"></td>
+        <td><input type="button" name="nine" value="9" onclick="calculator('9')"></td>
+        <td><input type="button" class="operator" name="plus" value="*" onclick="calculator('*')">
         </td>
     </tr>
     <tr>
-        <td><input type="reset" class="operator" name="plus" value="C" onclick="caculator('C')">
-        <td><input type="button" class="operator" name="plus" value="/" onclick="caculator('/')">
+        <td><input type="reset" class="clean" name="plus" value="C" onclick="calculator('C')">
+        <td><input type="button" name="nine" value="0" onclick="calculator('0')"></td>
         <td><input type="button"  value="=" onclick="res()">
+        <td><input type="button" class="operator" name="plus" value="/" onclick="calculator('/')">
+<!--        <td><input type="button" value="CE" onclick="ce()"></td>-->
 
         </td>
     </tr>
 </table>
 </form>
 <script>
-    function caculator (val){
-         document.getElementById("input").value += val
+    function calculator(x){
+        document.getElementById("input").value += x
     }
     function res(){
-        let res = document.getElementById("input").value
-        document.getElementById("input").value = eval(res)
+        const y = document.getElementById("input").value;
+        document.getElementById("input").value = eval(y)
     }
-
+   ;
 </script>
 </body>
 </html>
